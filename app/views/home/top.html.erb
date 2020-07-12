@@ -1,0 +1,61 @@
+
+<body>
+  <header class="header">
+    <h1>お散歩コンシェルジュ</h1>
+  </header>
+
+
+<div class="body">
+
+
+<!--
+  天気とかは難しいから後で
+    <div class="p">
+      <p class="">地域</p>
+  </div>
+      <div class="param">
+        <% area = "大田区" %>
+        <%= area %>
+      </div>
+
+  <div class="p">
+      <p>今日の天気</p>
+  </div>
+      <div class="param">
+        <% weather = "晴れ" %>
+        <%= weather %>
+      </div>
+
+-->
+
+  <div class="p">
+    <p>今日はここに出かけてみませんか？</p>
+  </div>
+      <div class="param">
+        <!--
+        --<% outing_spot = "多摩川の河川敷" %>
+        --<%= outing_spot %>
+        -->
+        <% @places_one.each do |place| %>
+        <%= place.name %><br>
+        <%= place.url %><br>
+        <% end %>
+      </div>
+
+  <div class="p">
+    <p>おすすめの外出スポットを教えてください</p>
+  </div>
+  　登録済みのスポット一覧を確認する
+
+</div>
+
+
+
+  <footer class="footer">
+
+  footer
+
+  </footer>
+
+
+</body>
